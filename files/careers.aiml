@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+<!-- Greeting and Start -->
+<category>
+    <pattern>START</pattern>
+    <template>
+        Hello! I'm your WGU CS Career Advisor Bot. I'll help you find the perfect computing career based on your interests and strengths.
+        <button>
+            <text>Let's get started!</text>
+            <postback>BEGIN QUESTIONS</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>HI</pattern>
+    <template><srai>START</srai></template>
+</category>
+
+<category>
+    <pattern>HELLO</pattern>
+    <template><srai>START</srai></template>
+</category>
+
+<category>
+    <pattern>BEGIN QUESTIONS</pattern>
+    <template>
+        Great! Let's find out which computing career suits you best.
+        <br/><br/>
+        Question 1: Do you prefer working with data and analysis, or building and creating systems?
+        <button>
+            <text>Data and Analysis</text>
+            <postback>DATA ANALYSIS</postback>
+        </button>
+        <button>
+            <text>Building and Creating</text>
+            <postback>BUILDING CREATING</postback>
+        </button>
+    </template>
+</category>
+
+<!-- Branch 1: Data and Analysis Path -->
+<category>
+    <pattern>DATA ANALYSIS</pattern>
+    <template>
+        Excellent choice! Now let me narrow it down further.
+        <br/><br/>
+        Question 2: Are you more interested in finding patterns and insights in data, or protecting systems from security threats?
+        <button>
+            <text>Patterns and Insights</text>
+            <postback>PATTERNS INSIGHTS</postback>
+        </button>
+        <button>
+            <text>Security and Protection</text>
+            <postback>SECURITY PROTECTION</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>PATTERNS INSIGHTS</pattern>
+    <template>
+        Perfect! Based on your interests in data analysis and finding patterns, I recommend:
+        <br/><br/>
+        <b>DATA SCIENTIST</b>
+        <br/><br/>
+        Data Scientists extract insights from large datasets using statistics, machine learning, and programming. You'll analyze complex data, build predictive models, and help organizations make data-driven decisions.
+        <br/><br/>
+        <b>Key Skills:</b> Python, R, SQL, Statistics, Machine Learning
+        <br/>
+        <b>Average Salary:</b> $100,000 - $130,000
+        <br/><br/>
+        Learn more about this career:
+        <button>
+            <text>Data Scientist Career Guide</text>
+            <url>https://www.coursera.org/articles/what-is-a-data-scientist</url>
+        </button>
+        <button>
+            <text>Start Over</text>
+            <postback>START</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>SECURITY PROTECTION</pattern>
+    <template>
+        Excellent! Based on your interest in security and protection, I recommend:
+        <br/><br/>
+        <b>CYBERSECURITY ANALYST</b>
+        <br/><br/>
+        Cybersecurity Analysts protect organizations from cyber threats by monitoring networks, investigating security breaches, and implementing security measures. You'll be the guardian of digital assets.
+        <br/><br/>
+        <b>Key Skills:</b> Network Security, Ethical Hacking, Risk Assessment, Security Tools
+        <br/>
+        <b>Average Salary:</b> $90,000 - $120,000
+        <br/><br/>
+        Learn more about this career:
+        <button>
+            <text>Cybersecurity Analyst Career Guide</text>
+            <url>https://www.coursera.org/articles/cybersecurity-analyst-job-guide</url>
+        </button>
+        <button>
+            <text>Start Over</text>
+            <postback>START</postback>
+        </button>
+    </template>
+</category>
+
+<!-- Branch 2: Building and Creating Path -->
+<category>
+    <pattern>BUILDING CREATING</pattern>
+    <template>
+        Great! Let's explore what you like to build.
+        <br/><br/>
+        Question 2: What type of systems interest you most?
+        <button>
+            <text>AI and Intelligent Systems</text>
+            <postback>AI SYSTEMS</postback>
+        </button>
+        <button>
+            <text>Applications and Software</text>
+            <postback>APPLICATIONS SOFTWARE</postback>
+        </button>
+        <button>
+            <text>Infrastructure and Cloud</text>
+            <postback>INFRASTRUCTURE CLOUD</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>AI SYSTEMS</pattern>
+    <template>
+        Fantastic! Based on your interest in AI and intelligent systems, I recommend:
+        <br/><br/>
+        <b>AI/MACHINE LEARNING ENGINEER</b>
+        <br/><br/>
+        AI/ML Engineers design and build intelligent systems that can learn and adapt. You'll create algorithms, train models, and develop AI-powered applications that solve real-world problems.
+        <br/><br/>
+        <b>Key Skills:</b> Python, TensorFlow, PyTorch, Deep Learning, Neural Networks
+        <br/>
+        <b>Average Salary:</b> $110,000 - $150,000
+        <br/><br/>
+        Learn more about this career:
+        <button>
+            <text>AI Engineer Career Guide</text>
+            <url>https://www.coursera.org/articles/ai-engineer</url>
+        </button>
+        <button>
+            <text>Start Over</text>
+            <postback>START</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>INFRASTRUCTURE CLOUD</pattern>
+    <template>
+        Excellent choice! Based on your interest in infrastructure and cloud systems, I recommend:
+        <br/><br/>
+        <b>CLOUD SOLUTIONS ARCHITECT</b>
+        <br/><br/>
+        Cloud Solutions Architects design and oversee cloud computing strategies for organizations. You'll work with platforms like AWS, Azure, and Google Cloud to build scalable, reliable infrastructure.
+        <br/><br/>
+        <b>Key Skills:</b> AWS/Azure/GCP, System Design, Networking, DevOps
+        <br/>
+        <b>Average Salary:</b> $120,000 - $160,000
+        <br/><br/>
+        Learn more about this career:
+        <button>
+            <text>Cloud Architect Career Guide</text>
+            <url>https://www.coursera.org/articles/cloud-architect</url>
+        </button>
+        <button>
+            <text>Start Over</text>
+            <postback>START</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>APPLICATIONS SOFTWARE</pattern>
+    <template>
+        Perfect! Based on your interest in building applications and software, I recommend:
+        <br/><br/>
+        <b>SOFTWARE DEVELOPER</b>
+        <br/><br/>
+        Software Developers design, code, and test applications that people use every day. You'll build everything from mobile apps to web platforms to enterprise software, turning ideas into functional products.
+        <br/><br/>
+        <b>Key Skills:</b> Java, Python, JavaScript, Git, Agile Development
+        <br/>
+        <b>Average Salary:</b> $85,000 - $120,000
+        <br/><br/>
+        Learn more about this career:
+        <button>
+            <text>Software Developer Career Guide</text>
+            <url>https://www.coursera.org/articles/software-developer</url>
+        </button>
+        <button>
+            <text>Start Over</text>
+            <postback>START</postback>
+        </button>
+    </template>
+</category>
+
+<!-- Fallback responses -->
+<category>
+    <pattern>*</pattern>
+    <template>
+        I'm sorry, I didn't quite understand that. I'm here to help you find the right computing career!
+        <button>
+            <text>Start Career Assessment</text>
+            <postback>START</postback>
+        </button>
+    </template>
+</category>
+
+</aiml>
